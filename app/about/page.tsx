@@ -47,22 +47,11 @@ const values = [
   },
 ];
 
-const team = [
-  {
-    name: 'Sarah Al Maktoum',
-    role: 'Founder & CEO',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
-  },
-  {
-    name: 'Ahmed Hassan',
-    role: 'Head of Operations',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
-  },
-  {
-    name: 'Emma Williams',
-    role: 'Client Relations Director',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
-  },
+const stats = [
+  { value: '50+', label: 'Premium Spaces' },
+  { value: '6', label: 'Prime Locations' },
+  { value: '500+', label: 'Happy Clients' },
+  { value: '24/7', label: 'Support Available' },
 ];
 
 export default function AboutPage() {
@@ -87,34 +76,34 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Mission Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-gold-500 font-medium tracking-wider uppercase text-sm">
-                Our Story
+                Our Mission
               </span>
               <h2 className="heading-2 mt-2 mb-6">
-                Born from Dubai&apos;s Vision of Excellence
+                Empowering Success Through Exceptional Spaces
               </h2>
               <div className="space-y-4 text-navy-600">
                 <p>
-                  Founded in 2018, LuxeOffices emerged from a simple observation: Dubai&apos;s
-                  ambitious businesses deserved workspaces that matched their aspirations.
-                  Our founders, with decades of combined experience in real estate and
-                  hospitality, set out to create something different.
+                  We believe that the right environment can transform the way you work.
+                  Our mission is to provide premium, thoughtfully designed workspaces
+                  that inspire productivity, foster creativity, and reflect the prestige
+                  of your business.
                 </p>
                 <p>
-                  We began with a single premium office in DIFC and have since expanded
-                  to offer over 50 exceptional spaces across Dubai&apos;s most prestigious
-                  locations. Each space is carefully selected and designed to provide an
-                  environment where businesses can flourish.
+                  From executive suites with panoramic views to dynamic co-working spaces,
+                  we offer a diverse portfolio of workspaces across Dubai&apos;s most
+                  prestigious addresses. Each space is carefully selected to meet the
+                  highest standards of quality and design.
                 </p>
                 <p>
-                  Today, we serve hundreds of clients ranging from ambitious startups to
-                  Fortune 500 companies, all seeking the perfect space to call their
-                  professional home in Dubai.
+                  We understand that every business is unique. That&apos;s why we offer
+                  flexible terms, personalized service, and a commitment to excellence
+                  that sets us apart in Dubai&apos;s commercial real estate market.
                 </p>
               </div>
             </div>
@@ -122,7 +111,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80"
-                  alt="LuxeOffices team meeting"
+                  alt="Premium office space"
                   fill
                   className="object-cover"
                 />
@@ -133,22 +122,18 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="section-padding bg-navy-950">
+      {/* Stats Section */}
+      <section className="py-16 bg-navy-950">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="text-gold-400 font-medium tracking-wider uppercase text-sm">
-              Our Mission
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-6">
-              Empowering Success Through Exceptional Spaces
-            </h2>
-            <p className="text-xl text-navy-300 leading-relaxed">
-              We believe that the right environment can transform the way you work. Our
-              mission is to provide premium, thoughtfully designed workspaces that inspire
-              productivity, foster creativity, and reflect the prestige of your business.
-              Every detail matters, from the panoramic views to the quality of the coffee.
-            </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-gold-400 mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-navy-300 font-medium">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -161,6 +146,10 @@ export default function AboutPage() {
               What We Stand For
             </span>
             <h2 className="heading-2 mt-2">Our Core Values</h2>
+            <p className="text-navy-600 mt-4 max-w-2xl mx-auto">
+              These principles guide everything we do, from selecting our spaces
+              to serving our clients.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
@@ -176,40 +165,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Why Choose Us Section */}
       <section className="section-padding bg-primary-50">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <span className="text-gold-500 font-medium tracking-wider uppercase text-sm">
-              Meet the Team
-            </span>
-            <h2 className="heading-2 mt-2">Leadership You Can Trust</h2>
-            <p className="text-navy-600 mt-4 max-w-2xl mx-auto">
-              Our experienced team brings together expertise in real estate, hospitality,
-              and customer service to deliver an exceptional experience.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {team.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="relative w-48 h-48 mx-auto mb-4 rounded-2xl overflow-hidden shadow-lg">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <h3 className="text-lg font-bold text-navy-950">{member.name}</h3>
-                <p className="text-gold-600">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Quality Section */}
-      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
@@ -225,10 +182,10 @@ export default function AboutPage() {
             </div>
             <div className="order-1 lg:order-2">
               <span className="text-gold-500 font-medium tracking-wider uppercase text-sm">
-                Quality Assurance
+                Why Choose Us
               </span>
               <h2 className="heading-2 mt-2 mb-6">
-                Our Commitment to Excellence
+                The LuxeOffices Difference
               </h2>
               <div className="space-y-4 text-navy-600">
                 <p>
@@ -238,16 +195,17 @@ export default function AboutPage() {
                 </p>
                 <p>
                   We partner exclusively with premium property owners and managers who
-                  share our commitment to excellence. Regular quality audits and client
-                  feedback help us maintain the high standards you expect.
+                  share our commitment to excellence. Regular quality audits help us
+                  maintain the high standards you expect.
                 </p>
               </div>
               <ul className="mt-6 space-y-3">
                 {[
                   'Rigorous space evaluation process',
-                  'Premium location verification',
-                  'Regular quality inspections',
-                  'Client satisfaction monitoring',
+                  'Premium locations across Dubai',
+                  'Immersive 3D virtual tours',
+                  'Flexible rental terms',
+                  'Dedicated client support',
                 ].map((item, index) => (
                   <li key={index} className="flex items-center">
                     <svg

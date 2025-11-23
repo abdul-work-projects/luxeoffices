@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { SpaceCard, Button } from '@/components';
 import { getFeaturedSpaces } from '@/data/spaces';
 
@@ -245,12 +244,9 @@ export default function HomePage() {
             <Button href="/contact" size="lg">
               Schedule a Tour
             </Button>
-            <Link
-              href="tel:+97141234567"
-              className="btn-outline border-white text-white hover:bg-white hover:text-navy-950 px-8 py-4 text-lg"
-            >
-              Call +971 4 123 4567
-            </Link>
+            <Button href="/contact" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-navy-950">
+              Send Inquiry
+            </Button>
           </div>
         </div>
       </section>

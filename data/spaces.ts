@@ -1,202 +1,269 @@
-import { Space } from '@/types';
+import { Space, LocationTag } from "@/types";
 
 export const spaces: Space[] = [
   {
-    id: 'burj-executive-suite',
-    name: 'Burj Executive Suite',
-    shortDescription: 'Premium corner office with panoramic Dubai skyline views in the heart of Downtown.',
-    longDescription: `Experience the pinnacle of luxury workspace at the Burj Executive Suite. This prestigious corner office offers breathtaking 180-degree views of the iconic Burj Khalifa and Dubai Fountain from floor-to-ceiling windows.
+    id: "onyx-tower-greens",
+    name: "The Onyx Tower Executive Office",
+    shortDescription:
+      "Fully furnished luxury office in The Onyx Tower, The Greens.",
+    longDescription: `Step into a world of sophistication and elegance with this exceptionally designed office space located in one of the most prestigious towers, The Onyx Tower.
 
-Designed for discerning executives and high-profile meetings, this space features Italian marble flooring, custom millwork, and state-of-the-art technology integration. The suite includes a private reception area, dedicated conference room, and exclusive lounge space.
+This fully furnished, high-end commercial office is a true symbol of success, crafted for elite businesses that demand nothing less than excellence. High-class furniture includes imported executive desks, leather chairs, handcrafted wood paneling, and designer lighting.
 
-Located in Downtown Dubai's most prestigious tower, you'll enjoy direct access to world-class dining, five-star hotels, and the Dubai Mall. Perfect for corporate headquarters, investor meetings, or establishing your brand's presence in the Middle East's business capital.`,
-    location: 'Downtown Dubai, Emirates Tower',
-    pricePerHour: 500,
-    pricePerDay: 3500,
+Prime location surrounded by top multinationals, financial institutions, and five-star hotels. Iconic tower with a reputation for excellence and unmatched prestige. Ideal for corporate headquarters, financial firms, boutique consultancies, or luxury brands seeking a top-tier image.`,
+    location: "The Onyx Tower 1, The Greens, Dubai",
+    locationTag: "the-greens",
+    pricePerYear: 450000,
     images: [
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80',
-      'https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=1200&q=80',
-      'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80',
+      "https://images.bayut.com/thumbnails/803801082-1066x800.webp",
+      "https://images.bayut.com/thumbnails/803801084-1066x800.webp",
+      "https://images.bayut.com/thumbnails/803801086-1066x800.webp",
+      "https://images.bayut.com/thumbnails/803801087-1066x800.webp",
+      "https://images.bayut.com/thumbnails/803801104-1066x800.webp",
+      "https://images.bayut.com/thumbnails/803801105-1066x800.webp",
     ],
-    matterportId: 'SxQL3iGyoDo',
     amenities: [
-      '24/7 Access',
-      'High-speed WiFi',
-      'Private Reception',
-      'Conference Room',
-      'Panoramic Views',
-      'Valet Parking',
-      'Concierge Service',
-      'Premium Coffee Bar',
+      "Fully Furnished",
+      "CCTV Security",
+      "Biometric Access",
+      "Conference Facility",
+      "Coffee Machine",
+      "Dry Pantry",
+      "Executive Furniture",
+      "24/7 Access",
+      "Dedicated Parking",
+      "Concierge Service",
     ],
-    capacity: 12,
-    size: 2500,
+    capacity: 15,
+    size: 1038,
     featured: true,
   },
   {
-    id: 'marina-creative-studio',
-    name: 'Marina Creative Studio',
-    shortDescription: 'Modern open-plan creative studio overlooking the stunning Dubai Marina yacht club.',
-    longDescription: `Unleash your creativity in this stunning waterfront studio space in Dubai Marina. With its industrial-chic design and abundant natural light, this space is perfect for creative agencies, design teams, and innovative startups.
+    id: "al-makhawi-shared-office",
+    name: "Al Makhawi Shared Office",
+    shortDescription:
+      "Beautiful shared office space near metro in Oud Metha, Bur Dubai.",
+    longDescription: `Welcome to Ambitious Business Center L.L.C which provides excellent value for your money.
 
-The Marina Creative Studio features exposed concrete ceilings, polished floors, and flexible open-plan layout that can be configured for collaborative work sessions or private focus areas. Large windows offer inspiring views of luxury yachts and the Marina skyline.
+This beautiful shared office space is conveniently located near the metro station in Oud Metha, Bur Dubai. Suitable to renew and issue Trade License (subject to approval from the concerned authority).
 
-Enjoy direct access to Marina Walk's vibrant cafes, restaurants, and retail. The space includes a fully equipped kitchen, breakout areas, and outdoor terrace perfect for team events or client entertainment.`,
-    location: 'Dubai Marina, Marina Gate Tower',
-    pricePerHour: 350,
-    pricePerDay: 2200,
+All you need to do is bring your laptop and start working! The space is perfect for entrepreneurs, freelancers, and small businesses looking for a professional environment without the overhead of a traditional office.`,
+    location: "Al Makhawi Building, Oud Metha, Bur Dubai",
+    locationTag: "oud-metha",
+    pricePerYear: 12900,
     images: [
-      'https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?w=1200&q=80',
-      'https://images.unsplash.com/photo-1497215842964-222b430dc094?w=1200&q=80',
-      'https://images.unsplash.com/photo-1606836591695-4d58a73eba1e?w=1200&q=80',
-      'https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=1200&q=80',
+      "https://images.bayut.com/thumbnails/784225998-1066x800.webp",
+      "https://images.bayut.com/thumbnails/750865282-1066x800.webp",
+      "https://images.bayut.com/thumbnails/750865283-1066x800.webp",
+      "https://images.bayut.com/thumbnails/750865284-1066x800.webp",
+      "https://images.bayut.com/thumbnails/750865285-1066x800.webp",
+      "https://images.bayut.com/thumbnails/750865286-1066x800.webp",
+      "https://images.bayut.com/thumbnails/750865287-1066x800.webp",
+      "https://images.bayut.com/thumbnails/579258789-1066x800.webp",
     ],
-    matterportId: 'Zh14WDtkgq8',
     amenities: [
-      'High-speed WiFi',
-      'Open Plan Layout',
-      'Outdoor Terrace',
-      'Fully Equipped Kitchen',
-      'Marina Views',
-      'Bike Storage',
-      'Shower Facilities',
-      'Event Space',
+      "Receiving Area",
+      "High-speed WiFi",
+      "DEWA Included",
+      "Chiller Free",
+      "Hot Beverages",
+      "Filtered Water",
+      "Landline Calls",
+      "Weekly Cleaning",
+      "Boardroom Access",
+      "Pantry",
     ],
-    capacity: 25,
-    size: 3200,
+    capacity: 4,
+    size: 100,
     featured: true,
   },
   {
-    id: 'difc-boardroom',
-    name: 'DIFC Premium Boardroom',
-    shortDescription: 'Sophisticated boardroom in Dubai International Financial Centre for high-stakes meetings.',
-    longDescription: `Make a powerful impression in the heart of Dubai's financial district. The DIFC Premium Boardroom is designed for executive meetings, board presentations, and high-profile negotiations.
+    id: "deira-business-center",
+    name: "Dynamic Business Center Deira",
+    shortDescription:
+      "Affordable shared office near metro in Hor Al Anz, Deira.",
+    longDescription: `Welcome to Dynamic Business Center L.L.C which provides excellent value for your money.
 
-This meticulously appointed space features a 20-seat solid walnut conference table, premium ergonomic seating, and integrated AV systems including 4K displays and video conferencing capabilities. Acoustic engineering ensures complete privacy for sensitive discussions.
+Located in the bustling Hor Al Anz area of Deira, this shared office space offers an affordable yet professional workspace solution. Suitable to renew and issue Trade License (subject to approval from the concerned authority).
 
-Located within Gate Village, you'll be surrounded by leading global financial institutions, law firms, and consulting companies. Dedicated support staff and catering services are available to ensure your meetings run flawlessly.`,
-    location: 'DIFC, Gate Village Building 4',
-    pricePerHour: 450,
-    pricePerDay: 3000,
+The office comes fully equipped with everything you need to run your business efficiently. Just bring your laptop and start working in this vibrant business community.`,
+    location: "Abdullah Kamber Business Center, Hor Al Anz, Deira",
+    locationTag: "deira",
+    pricePerYear: 10900,
     images: [
-      'https://images.unsplash.com/photo-1582653291997-079a1c04e5a1?w=1200&q=80',
-      'https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1200&q=80',
-      'https://images.unsplash.com/photo-1577412647305-991150c7d163?w=1200&q=80',
-      'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200&q=80',
+      "https://images.bayut.com/thumbnails/392462392-1066x800.webp",
+      "https://images.bayut.com/thumbnails/382760921-1066x800.webp",
+      "https://images.bayut.com/thumbnails/367944669-1066x800.webp",
+      "https://images.bayut.com/thumbnails/367944670-1066x800.webp",
+      "https://images.bayut.com/thumbnails/385289883-1066x800.webp",
+      "https://images.bayut.com/thumbnails/382916387-1066x800.webp",
+      "https://images.bayut.com/thumbnails/382916388-1066x800.webp",
+      "https://images.bayut.com/thumbnails/382916389-1066x800.webp",
     ],
-    matterportId: 'iLkHwN4U3XJ',
     amenities: [
-      'Video Conferencing',
-      '4K Presentation Display',
-      'Acoustic Privacy',
-      'Executive Catering',
-      'Dedicated Reception',
-      'Secure Document Printing',
-      'VIP Parking',
-      'Multi-language Support',
+      "Receiving Area",
+      "High-speed WiFi",
+      "DEWA Included",
+      "Chiller Free",
+      "Hot Beverages",
+      "Filtered Water",
+      "Landline Calls",
+      "Weekly Cleaning",
+      "Boardroom Access",
+      "Pantry",
     ],
-    capacity: 20,
-    size: 1800,
-    featured: true,
-  },
-  {
-    id: 'business-bay-coworking',
-    name: 'Business Bay Co-Working Hub',
-    shortDescription: 'Dynamic co-working space with hot desks and private pods in the bustling Business Bay.',
-    longDescription: `Join Dubai's most vibrant professional community at the Business Bay Co-Working Hub. This dynamic workspace offers flexible solutions for entrepreneurs, freelancers, and growing teams.
-
-Choose from hot desks in our open collaborative areas, dedicated desks for regular members, or private pods for focused work. The space features modern furnishings, excellent natural light, and a carefully curated atmosphere that balances energy with productivity.
-
-Benefit from our robust networking events, mentorship programs, and business support services. With 24/7 access, on-site café, and stunning canal views, this is the perfect launchpad for your Dubai business journey.`,
-    location: 'Business Bay, Prism Tower',
-    pricePerHour: 75,
-    pricePerDay: 450,
-    images: [
-      'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1200&q=80',
-      'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&q=80',
-      'https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=1200&q=80',
-    ],
-    matterportId: 'oGhDYEo5w8M',
-    amenities: [
-      '24/7 Access',
-      'High-speed WiFi',
-      'Hot Desks',
-      'Private Pods',
-      'On-site Café',
-      'Networking Events',
-      'Mail Handling',
-      'Meeting Room Credits',
-    ],
-    capacity: 100,
-    size: 8000,
+    capacity: 4,
+    size: 100,
     featured: false,
   },
   {
-    id: 'palm-jumeirah-retreat',
-    name: 'Palm Retreat Office',
-    shortDescription: 'Exclusive beachfront office space on the iconic Palm Jumeirah with private beach access.',
-    longDescription: `Experience work-life harmony at its finest in this exclusive beachfront office on Palm Jumeirah. This unique space combines the productivity of a professional office with the serenity of Dubai's most prestigious address.
+    id: "al-saqr-business-tower",
+    name: "Al Saqr Business Tower Office",
+    shortDescription:
+      "Premium furnished office on Sheikh Zayed Road near metro station.",
+    longDescription: `Welcome to Brave Business Center which provides excellent value for your money.
 
-The Palm Retreat Office features elegant coastal-inspired interiors with natural materials, soft color palettes, and expansive windows framing the Arabian Gulf. Private terraces offer the perfect setting for informal meetings or contemplative breaks.
+Experience premium office space in the iconic Al Saqr Business Tower on Sheikh Zayed Road. This furnished office offers a prestigious business address with excellent connectivity to the metro station.
 
-Ideal for creative professionals, wellness brands, or executives seeking an inspiring alternative to traditional office environments. Includes private beach access, wellness facilities, and proximity to Atlantis and the finest dining establishments.`,
-    location: 'Palm Jumeirah, Golden Mile',
-    pricePerHour: 600,
-    pricePerDay: 4000,
+Suitable to renew and issue Trade License (subject to approval from the concerned authority). The office comes fully furnished and equipped with modern amenities, including a dedicated landline number for your business.`,
+    location: "Al Saqr Business Tower, Sheikh Zayed Road",
+    locationTag: "sheikh-zayed-road",
+    pricePerYear: 28870,
     images: [
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+      "https://images.bayut.com/thumbnails/661406755-1066x800.webp",
+      "https://images.bayut.com/thumbnails/661406756-1066x800.webp",
+      "https://images.bayut.com/thumbnails/748094303-1066x800.webp",
+      "https://images.bayut.com/thumbnails/748094304-1066x800.webp",
+      "https://images.bayut.com/thumbnails/731724608-1066x800.webp",
+      "https://images.bayut.com/thumbnails/661406171-1066x800.webp",
+      "https://images.bayut.com/thumbnails/661406745-1066x800.webp",
+      "https://images.bayut.com/thumbnails/661406749-1066x800.webp",
+      "https://images.bayut.com/thumbnails/661406751-1066x800.webp",
+      "https://images.bayut.com/thumbnails/661406754-1066x800.webp",
     ],
-    matterportId: 'L5VRWKcNT7Z',
     amenities: [
-      'Private Beach Access',
-      'Ocean Views',
-      'Private Terrace',
-      'Wellness Center',
-      'Concierge Service',
-      'Valet Parking',
-      'Premium WiFi',
-      'Catering Available',
+      "Fully Furnished",
+      "Receiving Area",
+      "High-speed WiFi",
+      "DEWA Included",
+      "Chiller Free",
+      "Hot Beverages",
+      "Filtered Water",
+      "Dedicated Landline",
+      "Weekly Cleaning",
+      "Boardroom Access",
+      "Metro Connected",
     ],
-    capacity: 8,
-    size: 1500,
+    capacity: 6,
+    size: 100,
     featured: true,
   },
   {
-    id: 'jlt-startup-space',
-    name: 'JLT Innovation Lab',
-    shortDescription: 'Tech-forward workspace designed for startups and scale-ups in Jumeirah Lake Towers.',
-    longDescription: `Accelerate your startup journey at the JLT Innovation Lab, a purpose-built workspace designed for tech companies and innovative ventures. Located in the vibrant Jumeirah Lake Towers free zone, this space offers the perfect ecosystem for growth.
+    id: "city-gate-deira",
+    name: "City Gate Business Center",
+    shortDescription:
+      "Furnished office in Port Saeed with DEWA and chiller included.",
+    longDescription: `Discover your ideal workspace at Hashtag Business Center!
 
-Features include dedicated server room access, standing desks, private phone booths, and collaboration zones with writable walls. The industrial-modern design creates an energetic atmosphere that fuels innovation and productivity.
+Are you ready to elevate your business to new heights? Look no further than Ginger Business Center - your gateway to a world of possibilities.
 
-Benefit from JLT's strategic location with excellent metro connectivity, affordable F&B options, and a diverse international business community. Regular tech meetups, pitch events, and investor networking sessions are hosted on-site.`,
-    location: 'Jumeirah Lake Towers, Cluster Y',
-    pricePerHour: 120,
-    pricePerDay: 750,
+Prime office space in Deira City Center, Port Saeed. Located in the vibrant heart of Deira City Center, Port Saeed, our office spaces offer the perfect environment for your business to thrive. Accessible and strategically positioned, your new workspace is a hub of convenience.`,
+    location: "City Gate Building, Port Saeed, Deira",
+    locationTag: "port-saeed",
+    pricePerYear: 19000,
     images: [
-      'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80',
-      'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80',
-      'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80',
-      'https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=1200&q=80',
+      "https://images.bayut.com/thumbnails/729508657-1066x800.webp",
+      "https://images.bayut.com/thumbnails/729508658-1066x800.webp",
+      "https://images.bayut.com/thumbnails/729508659-1066x800.webp",
+      "https://images.bayut.com/thumbnails/729508660-1066x800.webp",
+      "https://images.bayut.com/thumbnails/729525680-1066x800.webp",
     ],
-    matterportId: 'mPRr2dJuNLX',
     amenities: [
-      'High-speed WiFi',
-      'Server Room Access',
-      'Standing Desks',
-      'Phone Booths',
-      'Collaboration Zones',
-      'Metro Access',
-      'Pitch Event Space',
-      '24/7 Access',
+      "Fully Furnished",
+      "DEWA Included",
+      "Chiller Free",
+      "High-speed WiFi",
+      "Reception Services",
+      "Meeting Room",
+      "Pantry Access",
+      "City Center Location",
     ],
-    capacity: 50,
-    size: 5000,
+    capacity: 4,
+    size: 100,
+    featured: true,
+  },
+  {
+    id: "business-bay-executive",
+    name: "Business Bay Executive Office",
+    shortDescription:
+      "Modern executive office space in the heart of Business Bay.",
+    longDescription: `Premium executive office space located in the prestigious Business Bay district of Dubai.
+
+Business Bay has emerged as one of Dubai's most sought-after business addresses, offering stunning views of the Dubai Canal and excellent connectivity to Downtown Dubai, DIFC, and Dubai International Airport.
+
+This modern office space provides everything you need for a professional business environment, with flexible terms and comprehensive services included.`,
+    location: "Business Bay, Dubai",
+    locationTag: "business-bay",
+    pricePerYear: 24000,
+    images: [
+      "https://images.bayut.com/thumbnails/675821200-1066x800.webp",
+      "https://images.bayut.com/thumbnails/675821202-1066x800.webp",
+      "https://images.bayut.com/thumbnails/675821203-1066x800.webp",
+      "https://images.bayut.com/thumbnails/675821206-1066x800.webp",
+      "https://images.bayut.com/thumbnails/675821216-1066x800.webp",
+      "https://images.bayut.com/thumbnails/675821218-1066x800.webp",
+      "https://images.bayut.com/thumbnails/646536210-1066x800.webp",
+      "https://images.bayut.com/thumbnails/646536194-1066x800.webp",
+      "https://images.bayut.com/thumbnails/646536173-1066x800.webp",
+      "https://images.bayut.com/thumbnails/675821249-1066x800.webp",
+    ],
+    amenities: [
+      "Fully Furnished",
+      "High-speed WiFi",
+      "DEWA Included",
+      "Meeting Room",
+      "Reception Area",
+      "Pantry",
+      "Parking Available",
+      "24/7 Access",
+    ],
+    capacity: 8,
+    size: 150,
+    featured: false,
+  },
+  {
+    id: "bur-dubai-premium",
+    name: "Bur Dubai Premium Office",
+    shortDescription:
+      "Premium office space in central Bur Dubai with all amenities.",
+    longDescription: `Located in the heart of Bur Dubai, this premium office space offers excellent accessibility and a professional business environment.
+
+Bur Dubai is one of Dubai's oldest and most established commercial districts, known for its vibrant business community and excellent transport links. The area offers a mix of traditional charm and modern amenities.
+
+This fully equipped office space is perfect for businesses looking for an affordable yet prestigious address in Dubai.`,
+    location: "Bur Dubai, Dubai",
+    locationTag: "bur-dubai",
+    pricePerYear: 15000,
+    images: [
+      "https://images.bayut.com/thumbnails/675870476-1066x800.webp",
+      "https://images.bayut.com/thumbnails/675870483-1066x800.webp",
+      "https://images.bayut.com/thumbnails/675870482-1066x800.webp",
+      "https://images.bayut.com/thumbnails/675870487-1066x800.webp",
+      "https://images.bayut.com/thumbnails/675870479-1066x800.webp",
+      "https://images.bayut.com/thumbnails/675870480-1066x800.webp",
+    ],
+    amenities: [
+      "Fully Furnished",
+      "High-speed WiFi",
+      "DEWA Included",
+      "Chiller Free",
+      "Reception Services",
+      "Meeting Room",
+      "Pantry",
+      "Metro Nearby",
+    ],
+    capacity: 6,
+    size: 120,
     featured: false,
   },
 ];
@@ -211,4 +278,13 @@ export function getFeaturedSpaces(): Space[] {
 
 export function getAllSpaces(): Space[] {
   return spaces;
+}
+
+export function getSpacesByLocation(locationTag: LocationTag): Space[] {
+  return spaces.filter((space) => space.locationTag === locationTag);
+}
+
+export function getAvailableLocations(): LocationTag[] {
+  const locations = new Set(spaces.map((space) => space.locationTag));
+  return Array.from(locations);
 }

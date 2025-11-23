@@ -174,7 +174,7 @@ export default function SpacePage({ params }: SpacePageProps) {
                     <div className="text-sm text-navy-600">Sq. Ft.</div>
                   </div>
                 )}
-                <div className="bg-navy-50 rounded-xl p-4 text-center">
+                <div className="bg-navy-50 rounded-xl p-4 text-center col-span-2 md:col-span-2">
                   <svg
                     className="w-8 h-8 mx-auto mb-2 text-gold-500"
                     fill="none"
@@ -185,33 +185,18 @@ export default function SpacePage({ params }: SpacePageProps) {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  <div className="text-2xl font-bold text-navy-900">AED {space.pricePerHour}</div>
-                  <div className="text-sm text-navy-600">Per Hour</div>
-                </div>
-                <div className="bg-navy-50 rounded-xl p-4 text-center">
-                  <svg
-                    className="w-8 h-8 mx-auto mb-2 text-gold-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <div className="text-2xl font-bold text-navy-900">AED {space.pricePerDay.toLocaleString()}</div>
-                  <div className="text-sm text-navy-600">Per Day</div>
+                  <div className="text-2xl font-bold text-navy-900">AED {space.pricePerYear.toLocaleString()}</div>
+                  <div className="text-sm text-navy-600">Per Year</div>
                 </div>
               </div>
 
               {/* Matterport Viewer */}
-              <MatterportViewer matterportId={space.matterportId} spaceName={space.name} />
+              {space.matterportId && (
+                <MatterportViewer matterportId={space.matterportId} spaceName={space.name} />
+              )}
 
               {/* Amenities */}
               <AmenitiesList amenities={space.amenities} />
@@ -223,52 +208,29 @@ export default function SpacePage({ params }: SpacePageProps) {
                 {/* Pricing Card */}
                 <div className="bg-white rounded-2xl shadow-card p-6">
                   <h3 className="text-lg font-bold text-navy-950 mb-4">Pricing</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between p-4 bg-gold-50 rounded-xl">
-                      <div>
-                        <div className="text-sm text-navy-600">Hourly Rate</div>
-                        <div className="text-2xl font-bold text-navy-950">
-                          AED {space.pricePerHour.toLocaleString()}
-                        </div>
+                  <div className="flex items-center justify-between p-4 bg-gold-50 rounded-xl">
+                    <div>
+                      <div className="text-sm text-navy-600">Yearly Rate</div>
+                      <div className="text-2xl font-bold text-navy-950">
+                        AED {space.pricePerYear.toLocaleString()}
                       </div>
-                      <svg
-                        className="w-10 h-10 text-gold-500"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
                     </div>
-                    <div className="flex items-center justify-between p-4 bg-navy-50 rounded-xl">
-                      <div>
-                        <div className="text-sm text-navy-600">Daily Rate</div>
-                        <div className="text-2xl font-bold text-navy-950">
-                          AED {space.pricePerDay.toLocaleString()}
-                        </div>
-                      </div>
-                      <svg
-                        className="w-10 h-10 text-navy-500"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
-                    </div>
+                    <svg
+                      className="w-10 h-10 text-gold-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
                   </div>
                   <p className="text-xs text-navy-500 mt-4">
-                    * Prices exclude VAT. Monthly rates available upon request.
+                    * Prices exclude VAT. Contact us for flexible terms.
                   </p>
                 </div>
 
@@ -285,11 +247,11 @@ export default function SpacePage({ params }: SpacePageProps) {
                     Our team is available to assist you with any questions.
                   </p>
                   <Button
-                    href="tel:+97141234567"
+                    href="/contact"
                     variant="primary"
                     className="w-full"
                   >
-                    Call +971 4 123 4567
+                    Contact Us
                   </Button>
                 </div>
               </div>
@@ -326,7 +288,7 @@ export default function SpacePage({ params }: SpacePageProps) {
                   </h3>
                   <p className="text-sm text-navy-600">{relatedSpace.location}</p>
                   <p className="text-sm font-semibold text-gold-600 mt-2">
-                    From AED {relatedSpace.pricePerHour}/hour
+                    AED {relatedSpace.pricePerYear.toLocaleString()}/year
                   </p>
                 </Link>
               ))}

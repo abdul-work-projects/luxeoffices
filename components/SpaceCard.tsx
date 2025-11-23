@@ -31,9 +31,9 @@ export default function SpaceCard({ space }: SpaceCardProps) {
           {/* Price Tag */}
           <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg">
             <span className="text-navy-950 font-bold">
-              AED {space.pricePerHour.toLocaleString()}
+              AED {space.pricePerYear.toLocaleString()}
             </span>
-            <span className="text-navy-600 text-sm">/hour</span>
+            <span className="text-navy-600 text-sm">/year</span>
           </div>
         </div>
 

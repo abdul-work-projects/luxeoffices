@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
-import { SpaceCard } from '@/components';
+import { Suspense } from 'react';
+import SpacesFilter from '@/components/SpacesFilter';
 import { getAllSpaces } from '@/data/spaces';
 
 export const metadata: Metadata = {
@@ -32,36 +33,9 @@ export default function SpacesPage() {
         </div>
       </section>
 
-      {/* Filters Bar */}
-      <section className="bg-white border-b border-navy-100 sticky top-20 z-40">
-        <div className="container-custom py-4">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div className="text-navy-600">
-              Showing <span className="font-semibold text-navy-900">{spaces.length}</span> available spaces
-            </div>
-            <div className="flex items-center gap-4">
-              <label className="text-sm text-navy-600">Sort by:</label>
-              <select className="px-4 py-2 rounded-lg border border-navy-200 bg-white text-navy-700 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none">
-                <option value="featured">Featured</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="name">Name A-Z</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Spaces Grid */}
-      <section className="section-padding bg-primary-50/50">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {spaces.map((space) => (
-              <SpaceCard key={space.id} space={space} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <Suspense fallback={<div className="py-8 text-center">Loading spaces...</div>}>
+        <SpacesFilter spaces={spaces} />
+      </Suspense>
 
       {/* CTA Section */}
       <section className="py-16 bg-white">
@@ -71,10 +45,7 @@ export default function SpacesPage() {
             Our team can help you find the perfect space tailored to your specific
             requirements. Contact us for personalized recommendations.
           </p>
-          <a
-            href="/contact"
-            className="btn-primary"
-          >
+          <a href="/contact" className="btn-primary">
             Contact Our Team
           </a>
         </div>
