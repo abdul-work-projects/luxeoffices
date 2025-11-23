@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { SpaceCard, Button } from '@/components';
-import { getFeaturedSpaces } from '@/data/spaces';
+import { getAllSpaces } from '@/data/spaces';
 
 const features = [
   {
@@ -54,7 +54,11 @@ const amenities = [
 ];
 
 export default function HomePage() {
-  const featuredSpaces = getFeaturedSpaces();
+  const allSpaces = getAllSpaces();
+  // Sort: featured first, then get first 6
+  const displaySpaces = [...allSpaces]
+    .sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0))
+    .slice(0, 6);
 
   return (
     <>
@@ -120,8 +124,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {featuredSpaces.map((space) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {displaySpaces.map((space) => (
               <SpaceCard key={space.id} space={space} />
             ))}
           </div>

@@ -14,6 +14,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn-2.matterport.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };

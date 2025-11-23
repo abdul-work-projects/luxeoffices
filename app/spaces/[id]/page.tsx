@@ -119,6 +119,11 @@ export default function SpacePage({ params }: SpacePageProps) {
                 </div>
               </div>
 
+              {/* Matterport Viewer - Show first for 3D spaces */}
+              {space.matterportId && (
+                <MatterportViewer matterportId={space.matterportId} spaceName={space.name} />
+              )}
+
               {/* Image Gallery */}
               <ImageGallery images={space.images} alt={space.name} />
 
@@ -192,11 +197,6 @@ export default function SpacePage({ params }: SpacePageProps) {
                   <div className="text-sm text-navy-600">Per Year</div>
                 </div>
               </div>
-
-              {/* Matterport Viewer */}
-              {space.matterportId && (
-                <MatterportViewer matterportId={space.matterportId} spaceName={space.name} />
-              )}
 
               {/* Amenities */}
               <AmenitiesList amenities={space.amenities} />

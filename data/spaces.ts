@@ -2,6 +2,114 @@ import { Space, LocationTag } from "@/types";
 
 export const spaces: Space[] = [
   {
+    id: "Regus-SoMa-Business-Center",
+    name: "Regus SoMa Business Center",
+    shortDescription:
+      "Contemporary open-plan workspace with immersive 3D virtual tour.",
+    longDescription: `Discover this modern collaborative workspace designed for teams that value creativity and productivity.
+
+The thoughtfully designed layout encourages collaboration while providing quiet corners for focused work. Large windows flood the space with natural light, creating an energizing environment for your team.
+
+Take a virtual walk-through with our 3D tour to experience the space before visiting. Perfect for startups, creative agencies, and forward-thinking businesses.`,
+    location: "Dubai Business Hub",
+    locationTag: "sheikh-zayed-road",
+    pricePerYear: 65000,
+    matterportId: "DGr1C1zrUGh",
+    images: [
+      "/images/spaces/space2-1.jpg",
+      "/images/spaces/space2-2.jpg",
+      "/images/spaces/space2-3.jpg",
+    ],
+    amenities: [
+      "3D Virtual Tour",
+      "Open Plan Layout",
+      "High-speed WiFi",
+      "Natural Lighting",
+      "Meeting Rooms",
+      "Breakout Areas",
+      "Kitchen Facilities",
+      "Secure Access",
+    ],
+    capacity: 20,
+    size: 1200,
+    featured: true,
+  },
+  {
+    id: "WorkbBox-River-North",
+    name: "WorkbBox - River North",
+    shortDescription:
+      "Sophisticated business center with full 3D virtual tour experience.",
+    longDescription: `Welcome to this professional business center offering premium office solutions in a prestigious Dubai location.
+
+This comprehensive workspace features multiple office configurations, from private suites to open workstations, all finished to the highest standards. The elegant lobby and professional reception create the perfect first impression for your clients.
+
+Explore every corner of this exceptional space with our detailed 3D virtual tour. Ideal for established businesses, consulting firms, and professional services.`,
+    location: "Dubai Commercial District",
+    locationTag: "deira",
+    pricePerYear: 120000,
+    matterportId: "X74CAuovLxD",
+    images: [
+      "/images/spaces/space3-1.jpg",
+      "/images/spaces/space3-2.jpg",
+      "/images/spaces/space3-3.jpg",
+      "/images/spaces/space3-4.jpg",
+      "/images/spaces/space3-5.jpg",
+      "/images/spaces/space3-6.jpg",
+      "/images/spaces/space3-7.jpg",
+    ],
+    amenities: [
+      "3D Virtual Tour",
+      "Professional Lobby",
+      "Reception Services",
+      "Private Offices",
+      "Conference Rooms",
+      "High-speed WiFi",
+      "Kitchen & Lounge",
+      "Secure Parking",
+      "24/7 Access",
+    ],
+    capacity: 30,
+    size: 2000,
+    featured: true,
+  },
+  {
+    id: "Shift-Workspaces",
+    name: "Shift Workspaces",
+    shortDescription:
+      "Luxurious executive suite with 3D virtual tour in prime Dubai location.",
+    longDescription: `Experience the pinnacle of executive workspace in this stunning premium suite featuring modern design and exceptional amenities.
+
+This beautifully appointed office space offers a perfect blend of sophistication and functionality. The open-plan design maximizes natural light while providing distinct zones for focused work, collaboration, and client meetings.
+
+Features include premium furnishings, state-of-the-art technology infrastructure, and access to shared amenities including a fully equipped kitchen and meeting facilities. Explore every detail with our immersive 3D virtual tour.`,
+    location: "Dubai Business District",
+    locationTag: "business-bay",
+    pricePerYear: 85000,
+    matterportId: "94SAqW5kjjj",
+    images: [
+      "/images/spaces/space1-1.jpg",
+      "/images/spaces/space1-2.jpg",
+      "/images/spaces/space1-3.jpg",
+      "/images/spaces/space1-4.jpg",
+      "/images/spaces/space1-5.jpg",
+      "/images/spaces/space1-6.jpg",
+      "/images/spaces/space1-7.jpg",
+    ],
+    amenities: [
+      "3D Virtual Tour",
+      "Fully Furnished",
+      "High-speed WiFi",
+      "Meeting Room",
+      "Kitchen Access",
+      "24/7 Access",
+      "Reception Area",
+      "Parking Available",
+    ],
+    capacity: 10,
+    size: 800,
+    featured: true,
+  },
+  {
     id: "onyx-tower-greens",
     name: "The Onyx Tower Executive Office",
     shortDescription:
@@ -36,7 +144,7 @@ Prime location surrounded by top multinationals, financial institutions, and fiv
     ],
     capacity: 15,
     size: 1038,
-    featured: true,
+    featured: false,
   },
   {
     id: "al-makhawi-shared-office",
@@ -75,7 +183,7 @@ All you need to do is bring your laptop and start working! The space is perfect 
     ],
     capacity: 4,
     size: 100,
-    featured: true,
+    featured: false,
   },
   {
     id: "deira-business-center",
@@ -156,7 +264,7 @@ Suitable to renew and issue Trade License (subject to approval from the concerne
     ],
     capacity: 6,
     size: 100,
-    featured: true,
+    featured: false,
   },
   {
     id: "city-gate-deira",
@@ -190,7 +298,7 @@ Prime office space in Deira City Center, Port Saeed. Located in the vibrant hear
     ],
     capacity: 4,
     size: 100,
-    featured: true,
+    featured: false,
   },
   {
     id: "business-bay-executive",
