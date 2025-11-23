@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 
 const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const MONTHS = [
@@ -8,13 +8,18 @@ const MONTHS = [
   'July', 'August', 'September', 'October', 'November', 'December'
 ];
 
-// Generate some random "booked" dates for demo purposes
+// Generate deterministic "booked" dates based on year and month (for demo purposes)
 const generateBookedDates = (year: number, month: number): number[] => {
-  const booked: number[] = [];
   const daysInMonth = new Date(year, month + 1, 0).getDate();
-  // Randomly mark some days as booked
+  // Use a simple seed based on year and month for consistent results
+  const seed = year * 12 + month;
+  const booked: number[] = [];
+  // Generate 5 deterministic "booked" days
   for (let i = 0; i < 5; i++) {
-    booked.push(Math.floor(Math.random() * daysInMonth) + 1);
+    const day = ((seed * (i + 1) * 7) % daysInMonth) + 1;
+    if (!booked.includes(day)) {
+      booked.push(day);
+    }
   }
   return booked;
 };
@@ -25,7 +30,10 @@ export default function Calendar() {
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
-  const bookedDates = generateBookedDates(currentYear, currentMonth);
+  const bookedDates = useMemo(
+    () => generateBookedDates(currentYear, currentMonth),
+    [currentYear, currentMonth]
+  );
 
   const getDaysInMonth = (year: number, month: number) => {
     return new Date(year, month + 1, 0).getDate();
